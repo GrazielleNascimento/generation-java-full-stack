@@ -13,6 +13,16 @@ programa
 		escreva("Informe um numero: ")
 		leia(num)
 
+		/*se (num > 10) {
+
+          escreva("verdadeiro")
+
+          } senao {
+
+         escreva("falso")
+
+         }*/
+
 		superior = num > 10
 
 	     escreva( superior)		
@@ -24,7 +34,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 417; 
+ * @POSICAO-CURSOR = 472; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

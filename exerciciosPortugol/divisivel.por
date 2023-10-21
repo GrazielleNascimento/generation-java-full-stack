@@ -17,6 +17,16 @@ programa
 		escreva("Informe um numero: ")
 		leia(num)
 
+		/*se (numero % 4 == 0 || numero % 9 == 0) {
+
+          escreva("verdadeiro")
+
+          } senao {
+
+          escreva("falso")
+
+         }*/
+
 		 divisivel = (num % 4 == 0 ou num % 9 == 0)
 
 		 escreva(divisivel)
@@ -29,7 +39,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 389; 
+ * @POSICAO-CURSOR = 650; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

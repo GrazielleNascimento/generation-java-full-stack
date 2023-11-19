@@ -120,7 +120,18 @@ public class Produto {
 	public void setAvaliacaoUsuarios(double avaliacaoUsuarios) {
 		this.avaliacaoUsuarios = avaliacaoUsuarios;
 	}
-	
+	public void visualizar() {
+		System.out.println("\nJogo: " + nome 
+					+ "\nPreço: " + preco 	
+					+ "\nPlataforma " + plataforma
+					+ "\nData de lançamento: " + dataLancamento
+					+ "\nDescriçao: " + descricao
+					+ "\nDesenvolvedora: " + desenvolvedora
+					+ "\nClassificação Etária: " + classificacaoEtaria
+					+ "\nGenêro: " + genero
+					+ "\nIdiomas Disponíveis " + idiomasDisponiveis
+					+ "\nAvaliação dos Usuário: " + avaliacaoUsuarios);
+	}
 	
 
 }

@@ -60,6 +60,20 @@ public class ProdutoController implements ProdutoRepository {
 		}
 
 	}
-	
+	//optional cria a caixa para ter um objeto, se caso não ter ele nos avisa com o metodo isPresent, se caso nao com o metodo empty
+	public Optional<Produto> buscarNaCollection(int id) {
+
+		// percorre a lista de produtos
+		// Produto = tipo | produto = aponta p/ o obj da listaProdutos na hora da
+		// interacao do for
+		// listaProdutos = vai conter varios Produtos
+		for (Produto produto : listaProdutos) {
+			if (produto.getId() == id) {
+				// Se encontrar o produto com o id procurado, retorna um optional deste produto
+				return Optional.of(produto);
+			}
+		}
+		return Optional.empty();// se caso não encontar um produto, retorna um Optional.empty
+	}
 
 }

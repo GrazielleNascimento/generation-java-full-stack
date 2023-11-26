@@ -1,4 +1,3 @@
-
 package farmacia.controller;
 
 import java.util.ArrayList;
@@ -11,6 +10,9 @@ public class ProdutoController implements ProdutoRepository {
 
 	// criar a Collection
 	private ArrayList<Produto> listaProdutos = new ArrayList<>();
+	
+	//variavel para receber o id do Produto
+	int id = 0;
 
 	@Override
 	public void criarProduto(Produto produto) {
@@ -60,6 +62,14 @@ public class ProdutoController implements ProdutoRepository {
 		}
 
 	}
+	
+	/*Metodos Auxiliares*/
+	
+	
+	public int gerarId() {
+		return ++id;
+	}
+	
 	//optional cria a caixa para ter um objeto, se caso não ter ele nos avisa com o metodo isPresent, se caso nao com o metodo empty
 	public Optional<Produto> buscarNaCollection(int id) {
 

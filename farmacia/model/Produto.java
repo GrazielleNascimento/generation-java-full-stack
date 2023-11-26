@@ -6,6 +6,13 @@ public abstract class Produto {
 	private String nome;
 	private int tipo;
 	private double preco;
+	
+	public Produto(int id, String nome, int tipo, double preco) {
+		this.id = id;
+		this.nome = nome;
+		this.tipo = tipo;
+		this.preco = preco;
+	}
 
 	public int getId() {
 		return id;

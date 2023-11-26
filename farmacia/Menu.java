@@ -64,7 +64,33 @@ public class Menu {
 			int tipo;
 			double preco;
 
-		
+			switch (opcao) {
+			case 1: {
+
+				System.out.println("Digite o tipo do Produto\n1 - Medicamento\n2 - Cosmético: ");
+				tipo = sc.nextInt();
+				System.out.println("Digite o nome do Produto: ");
+				sc.skip("\\R");
+				nome = sc.nextLine();
+				System.out.println("Digite o preço do Produto: ");
+				preco = sc.nextFloat();
+				switch (tipo) {
+				case 1:
+					System.out.println("Digite o nome do Genérico desse Medicamento: ");
+					sc.skip("\\R");
+					generico = sc.nextLine();
+					produtos.criarProduto(new Medicamento(produtos.gerarId(), nome, tipo, preco, generico));
+					break;
+				case 2:
+					System.out.println("Digite a fragrância do Cosmético: ");
+					sc.skip("\\R");
+					fragrancia = sc.nextLine();
+					produtos.criarProduto(new Cosmetico(produtos.gerarId(), nome, tipo, preco, fragrancia));
+					break;
+				}
+				keyPress();
+			}
+			}
 		}
 	}
 

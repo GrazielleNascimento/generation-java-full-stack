@@ -2,12 +2,12 @@ package farmacia.model;
 
 public class Medicamento extends Produto {
 
+	private String generico;
+
 	public Medicamento(int id, String nome, int tipo, double preco, String generico) {
 		super(id, nome, tipo, preco);
 		this.generico = generico;
 	}
-
-	private String generico;
 
 	public String getGenerico() {
 		return generico;
@@ -19,8 +19,7 @@ public class Medicamento extends Produto {
 
 	public void visualizar() {
 		super.visualizar();
-		System.out.println("generico: " + generico);
+		System.out.println(" generico: " + generico);
 	}
 
 }
-

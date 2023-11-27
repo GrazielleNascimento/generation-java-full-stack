@@ -10,14 +10,14 @@ public class ProdutoController implements ProdutoRepository {
 
 	// criar a Collection
 	private ArrayList<Produto> listaProdutos = new ArrayList<>();
-	
-	//variavel para receber o id do Produto
+
+	// variavel para receber o id do Produto
 	int id = 0;
 
 	@Override
 	public void criarProduto(Produto produto) {
 		listaProdutos.add(produto);
-		System.out.println("Produto: " + produto.getId() + " foi criado com sucesso");
+		System.out.println("\nProduto " + produto.getId() + " foi criado com sucesso");
 	}
 
 	@Override
@@ -31,7 +31,7 @@ public class ProdutoController implements ProdutoRepository {
 	public void consultarPorId(int id) {
 		Optional<Produto> opProduto = buscarNaCollection(id);
 		if (opProduto.isPresent()) {
-			System.out.println("PRODUTO: " + opProduto.get());// opProduto.get() retorna um objeto do optional
+			opProduto.get().visualizar();// opProduto.get() retorna um objeto do optional
 		} else {
 			System.out.println("O Produto do id:  " + id + " não foi cadastrado");
 		}
@@ -52,25 +52,24 @@ public class ProdutoController implements ProdutoRepository {
 	@Override
 	public void deletarProduto(int id) {
 		Optional<Produto> opProduto = buscarNaCollection(id);
-		if(opProduto.isPresent()) {
-			if(listaProdutos.remove(opProduto.get()) == true) {
+		if (opProduto.isPresent()) {
+			if (listaProdutos.remove(opProduto.get()) == true) {
 				System.out.println("Produto deletado");
 			}
-			else {
-				System.out.println("Produto não encontrado");
-			}
+		} else {
+			System.out.println("Produto não encontrado");
 		}
 
 	}
-	
-	/*Metodos Auxiliares*/
-	
-	
+
+	/* Metodos Auxiliares */
+
 	public int gerarId() {
 		return ++id;
 	}
-	
-	//optional cria a caixa para ter um objeto, se caso não ter ele nos avisa com o metodo isPresent, se caso nao com o metodo empty
+
+	// optional cria a caixa para ter um objeto, se caso não ter ele nos avisa com o
+	// metodo isPresent, se caso nao com o metodo empty
 	public Optional<Produto> buscarNaCollection(int id) {
 
 		// percorre a lista de produtos

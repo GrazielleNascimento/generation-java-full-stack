@@ -6,7 +6,7 @@ public abstract class Produto {
 	private String nome;
 	private int tipo;
 	private double preco;
-	
+
 	public Produto(int id, String nome, int tipo, double preco) {
 		this.id = id;
 		this.nome = nome;
@@ -47,7 +47,8 @@ public abstract class Produto {
 	}
 
 	public void visualizar() {
-		System.out.println("O Produto: " + id + "nome: " + nome + "tipo: " + tipo + "preco: " + preco);
+		System.out.print("Produto " + id + ", " + nome + ", tipo: " + (tipo == 1 ? "Medicamento" : "Cosmetico")
+				+ ", preco: " + +preco + ",");
 
 	}
 
